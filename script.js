@@ -1,5 +1,6 @@
 let apiData;
 const countriesList = document.querySelector("#countriesList");
+const enter = document.querySelector("#enter")
 
 async function setup(){
     fetchREST();
@@ -24,19 +25,19 @@ function createNewCountryElement (country) {
    countriesList.appendChild(newListItem);
 }
 
-// function filterItems(arr, query) {
-//     return arr.filter(el) => 
-//     el.toLowerCase().includes(query.toLowerCase());
-// }
 
-// document.querySelector("button").addEventListener("click", filterItems) {
-//     countriesList.filter(country => c)
-// }
+enter.addEventListener("click", event => {
+    // event.preventDefault();
+    const newItem = document.getElementById("filter").value
+    // console.log(newItem);
 
+})
 
 
-// const enter = document.getElementById("enter"); 
-// const newItem = document.getElementById("new-country").value;
-
+function filterItems() {
+    return apiData.filter((newListItem) => newListItem.toLowerCase().includes(newItem.toLowerCase()));
+ console.log(filterItems(apiData));
+}
+  
 
 
